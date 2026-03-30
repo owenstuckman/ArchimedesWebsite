@@ -1,36 +1,42 @@
 <script>
-    import Hero from '$lib/components/Hero.svelte';
-    
-    function handleSubmit() {
-        window.open("https://forms.gle/hn8M2EEhQZfhetTR9");
-    }
+	import Hero from '$lib/components/Hero.svelte';
 
+	function handleSubmit() {
+		window.open('https://forms.gle/hn8M2EEhQZfhetTR9');
+	}
 </script>
 
 <svelte:head>
-    <title>Apply - Archimedes</title>
-    <meta name="description" content="Apply to join Archimedes at Virginia Tech and start your engineering journey." />
+	<title>Apply - Archimedes</title>
+	<meta
+		name="description"
+		content="Apply to join Archimedes at Virginia Tech and start your engineering journey."
+	/>
 </svelte:head>
 
-<Hero 
-    title="Apply to Archimedes"
-    subtitle="We're glad you're interested."
-    image="https://images.squarespace-cdn.com/content/v1/65da7e107ab81564f3ca3dd0/9a13e988-1f0b-4d96-ba20-9cd41eab89f5/infinitum+pic.png"
+<Hero
+	title="Apply to Archimedes"
+	subtitle="We're glad you're interested."
+	image="/images/hero-apply.png"
 />
 
 <section class="section">
-    <div class="container">
-        <div class="apply-content">
-            <div class="info-box">
-                <h2>Applications are now closed for 25-26!</h2>
-                <p>Please fill out our interest form for updates and instructions on applying to Archimedes. You will automatically be unsubscribed from our mailing list once the recruiting season has ended.</p>
-            </div>
-            <center>
-                <button class="btn interest-btn" on:click={handleSubmit}>
-                Click to fill out the interest form!
-                </button>
-            </center>
-            <!-- 
+	<div class="container">
+		<div class="apply-content">
+			<div class="info-box">
+				<h2>Applications are now closed for 25-26!</h2>
+				<p>
+					Please fill out our interest form for updates and instructions on applying to Archimedes.
+					You will automatically be unsubscribed from our mailing list once the recruiting season
+					has ended.
+				</p>
+			</div>
+			<center>
+				<button class="btn btn--primary interest-btn" on:click={handleSubmit}>
+					Click to fill out the interest form!
+				</button>
+			</center>
+			<!-- 
             {#if !submitted}
                 <form class="interest-form" on:submit={handleSubmit}>
                     <input 
@@ -48,72 +54,32 @@
                 </div>
             {/if}
         -->
-        </div>
-    </div>
+		</div>
+	</div>
 </section>
 
 <style>
-    .interest-btn {
-        background-color: var(--primary-color);
-        color: white;
-        padding: 0.75rem 1.5rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-        margin-top: 1rem;
-    }
+	.interest-btn {
+		font-size: 1.1rem;
+		margin-top: 1rem;
+	}
 
-    .interest-btn:hover {
-    background-color: var(--secondary-color);
-    }
-    .apply-content {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .info-box {
-        background: var(--gray-light);
-        padding: 2rem;
-        border-radius: 8px;
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    
-    .info-box h2 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-    }
-    
-    .interest-form {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    
-    .interest-form input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        margin-bottom: 1rem;
-        font-size: 1rem;
-    }
-    
-    .success-message {
-        background: #4caf50;
-        color: white;
-        padding: 2rem;
-        border-radius: 8px;
-        text-align: center;
-    }
-    
-    .success-message h3 {
-        margin-bottom: 1rem;
-    }
+	.apply-content {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.info-box {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 2rem;
+		border-radius: var(--radius-md);
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.info-box h2 {
+		color: var(--archimedes-yellow);
+		margin-bottom: 1rem;
+	}
 </style>

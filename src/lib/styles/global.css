@@ -4,198 +4,311 @@
    ========================================= */
 
 :root {
-  /* Brand Colors */
-  --archimedes-yellow: #ffb800; /* Warmer, more visible yellow */
-  --archimedes-yellow-bright: #ffd000; /* Brighter version for text/icons on white */
-  --luminal-yellow: #ffdf00; /* Hover/soft accent */
-  --incandescent-gold: #e8aa00; /* Deeper gold for elegant highlights */
+	/* Brand Colors */
+	--archimedes-yellow: #ffb800; /* Warmer, more visible yellow */
+	--archimedes-yellow-bright: #ffd000; /* Brighter version for text/icons on white */
+	--luminal-yellow: #ffdf00; /* Hover/soft accent */
+	--incandescent-gold: #e8aa00; /* Deeper gold for elegant highlights */
 
-  --steel: #192b2e; /* Primary dark */
-  --halogen-haze: #fffcf2; /* Primary light */
-  --black: #000000;
-  --white: #ffffff;
+	--steel: #192b2e; /* Primary dark */
+	--halogen-haze: #fffcf2; /* Primary light */
+	--black: #000000;
+	--white: #ffffff;
 
-  /* Gradient */
-  --grad-left: #ffb300;
-  --grad-right: #ffd100;
+	/* Gradient */
+	--grad-left: #ffb300;
+	--grad-right: #ffd100;
 
-  /* Typography */
-  --font-primary: 'Metropolis', 'Roboto', system-ui, sans-serif;
-  --font-secondary: 'Roboto', system-ui, sans-serif;
+	/* Legacy aliases for component compatibility */
+	--primary-color: var(--archimedes-yellow);
+	--secondary-color: var(--incandescent-gold);
+	--dark-bg: var(--steel);
+	--gray-light: #f5f5f5;
+	--gray-medium: #666666;
+	--text-dark: var(--steel);
 
-  /* Effects */
-  --radius-lg: 12px;
-  --radius-md: 10px;
-  --radius-sm: 8px;
-  --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 10px 26px rgba(0, 0, 0, 0.25);
-  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.15);
-  --tr: 0.25s ease;
+	/* Typography */
+	--font-primary: 'Metropolis', 'Roboto', system-ui, sans-serif;
+	--font-secondary: 'Roboto', system-ui, sans-serif;
 
-  /* Text Colors */
-  --text-on-dark: var(--halogen-haze);
-  --text-on-light: var(--steel);
+	/* Effects */
+	--radius-lg: 12px;
+	--radius-md: 10px;
+	--radius-sm: 8px;
+	--shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.35);
+	--shadow-md: 0 10px 26px rgba(0, 0, 0, 0.25);
+	--shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.15);
+	--tr: 0.25s ease;
+
+	/* Text Colors */
+	--text-on-dark: var(--halogen-haze);
+	--text-on-light: var(--steel);
 }
 
 /* Base */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
 body {
-  background: var(--steel);
-  color: var(--text-on-dark);
-  font-family: var(--font-primary);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+	height: 100%;
+}
+body {
+	background: var(--steel);
+	color: var(--text-on-dark);
+	font-family: var(--font-primary);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 /* Layout */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 88px 0; }
-.section--light { background: var(--halogen-haze); color: var(--text-on-light); }
-.section--dark { background: var(--steel); color: var(--text-on-dark); }
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+.section {
+	padding: 88px 0;
+}
+.section--light {
+	background: var(--halogen-haze);
+	color: var(--text-on-light);
+}
+.section--dark {
+	background: var(--steel);
+	color: var(--text-on-dark);
+}
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 0.85rem;
-  color: var(--text-on-dark);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 800;
+	line-height: 1.1;
+	margin-bottom: 0.85rem;
+	color: var(--text-on-dark);
 }
-.section--light h1, .section--light h2, .section--light h3, .section--light h4 {
-  color: var(--steel);
+.section--light h1,
+.section--light h2,
+.section--light h3,
+.section--light h4 {
+	color: var(--steel);
 }
 
-h1 { font-size: 3.2rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.8rem; font-weight: 700; }
-h4 { font-size: 1.25rem; font-weight: 600; }
+h1 {
+	font-size: 3.2rem;
+}
+h2 {
+	font-size: 2.5rem;
+}
+h3 {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+h4 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
 
 p {
-  font-family: var(--font-secondary);
-  font-size: 1.0625rem;
-  margin-bottom: 1rem;
-  color: inherit;
-  opacity: 0.98;
+	font-family: var(--font-secondary);
+	font-size: 1.0625rem;
+	margin-bottom: 1rem;
+	color: inherit;
+	opacity: 0.98;
 }
 
 .overline {
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: var(--luminal-yellow);
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	font-weight: 700;
+	font-size: 0.8rem;
+	color: var(--luminal-yellow);
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
+	h1 {
+		font-size: 2.4rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
 }
 
 /* Links */
 a {
-  color: var(--archimedes-yellow);
-  text-decoration: none;
-  transition: color var(--tr);
+	color: var(--archimedes-yellow);
+	text-decoration: none;
+	transition: color var(--tr);
 }
-a:hover { color: var(--luminal-yellow); }
+a:hover {
+	color: var(--luminal-yellow);
+}
 
 .section--light a {
-  color: var(--archimedes-yellow-bright);
+	color: var(--archimedes-yellow-bright);
 }
 .section--light a:hover {
-  color: #ffb600;
+	color: #ffb600;
 }
 
 /* Cards */
 .card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-sm);
-  color: var(--text-on-dark);
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: var(--radius-lg);
+	padding: 28px;
+	box-shadow: var(--shadow-sm);
+	color: var(--text-on-dark);
 }
-.card--accent { border-color: rgba(255, 200, 0, 0.35); }
+.card--accent {
+	border-color: rgba(255, 200, 0, 0.35);
+}
 
 /* Light cards */
 .section--light .card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  color: var(--text-on-light);
+	background: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	color: var(--text-on-light);
 }
 .section--light .card h3,
 .section--light .card h4 {
-  color: var(--archimedes-yellow-bright);
+	color: var(--archimedes-yellow-bright);
 }
 .section--light .card p {
-  color: var(--steel);
+	color: var(--steel);
 }
 
 /* Utility for yellow highlights */
-.text-yellow { color: var(--archimedes-yellow) !important; }
-.section--light .text-yellow { color: var(--archimedes-yellow-bright) !important; }
+.text-yellow {
+	color: var(--archimedes-yellow) !important;
+}
+.section--light .text-yellow {
+	color: var(--archimedes-yellow-bright) !important;
+}
 
 /* Buttons */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all var(--tr);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 14px 28px;
+	border-radius: var(--radius-sm);
+	font-weight: 700;
+	border: 1px solid transparent;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all var(--tr);
 }
 
 /* Brightened for light surfaces */
 .btn--primary {
-  background: var(--archimedes-yellow);
-  color: var(--steel);
+	background: var(--archimedes-yellow);
+	color: var(--steel);
 }
 .btn--primary:hover {
-  background: var(--archimedes-yellow-bright);
+	background: var(--archimedes-yellow-bright);
 }
 .section--light .btn--primary {
-  background: var(--archimedes-yellow-bright);
-  color: var(--steel);
+	background: var(--archimedes-yellow-bright);
+	color: var(--steel);
 }
 .section--light .btn--primary:hover {
-  background: #ffea4d;
+	background: #ffea4d;
 }
 
 /* Outline */
 .btn--outline {
-  color: var(--archimedes-yellow);
-  border-color: var(--archimedes-yellow);
-  background: transparent;
+	color: var(--archimedes-yellow);
+	border-color: var(--archimedes-yellow);
+	background: transparent;
 }
 .btn--outline:hover {
-  color: var(--archimedes-yellow-bright);
-  border-color: var(--archimedes-yellow-bright);
-  background: rgba(255, 200, 0, 0.1);
+	color: var(--archimedes-yellow-bright);
+	border-color: var(--archimedes-yellow-bright);
+	background: rgba(255, 200, 0, 0.1);
 }
 
 /* Footer */
 .footer {
-  background: #0f1d1f;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 56px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+	background: #0f1d1f;
+	color: rgba(255, 255, 255, 0.85);
+	padding: 56px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
-.footer a { color: var(--archimedes-yellow); }
-.footer a:hover { color: var(--luminal-yellow); }
+.footer a {
+	color: var(--archimedes-yellow);
+}
+.footer a:hover {
+	color: var(--luminal-yellow);
+}
+
+/* Form Inputs */
+input,
+textarea,
+select {
+	font-family: var(--font-secondary);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea,
+select {
+	background: var(--white);
+	color: var(--steel);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: var(--radius-sm);
+	padding: 12px 16px;
+	font-size: 1rem;
+	transition:
+		border-color var(--tr),
+		box-shadow var(--tr);
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	border-color: var(--archimedes-yellow);
+	box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--gray-medium);
+}
 
 /* Utilities */
-.text-center { text-align: center; }
-.bg-halogen { background: var(--halogen-haze) !important; }
-.bg-steel { background: var(--steel) !important; color: var(--text-on-dark) !important; }
-.bg-gradient { background: linear-gradient(90deg, var(--grad-left), var(--grad-right)) !important; }
+.text-center {
+	text-align: center;
+}
+.bg-halogen {
+	background: var(--halogen-haze) !important;
+}
+.bg-steel {
+	background: var(--steel) !important;
+	color: var(--text-on-dark) !important;
+}
+.bg-gradient {
+	background: linear-gradient(90deg, var(--grad-left), var(--grad-right)) !important;
+}
 
-.border-yellow { border-color: var(--archimedes-yellow) !important; }
-.section--light .border-yellow { border-color: var(--archimedes-yellow-bright) !important; }
-
+.border-yellow {
+	border-color: var(--archimedes-yellow) !important;
+}
+.section--light .border-yellow {
+	border-color: var(--archimedes-yellow-bright) !important;
+}
